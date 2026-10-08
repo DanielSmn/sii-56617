@@ -42,3 +42,9 @@ Asignatura impartida por el **Departamento de Ingeniería Eléctrica, Electróni
 Este repositorio tiene finalidad exclusivamente docente.
 
 Si detectas algún error o tienes alguna sugerencia de mejora, puedes comunicarlo al profesorado de la asignatura.
+
+
+## 🎓 Contribuciones
+
+Practica 1
+Se ha hecho fork del repositorio original y se ha modificado en linux, se ha modificado esfera y raqueta para que se muevan.
