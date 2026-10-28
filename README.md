@@ -42,3 +42,11 @@ Asignatura impartida por el **Departamento de Ingeniería Eléctrica, Electróni
 Este repositorio tiene finalidad exclusivamente docente.
 
 Si detectas algún error o tienes alguna sugerencia de mejora, puedes comunicarlo al profesorado de la asignatura.
+
+---
+
+## 📚 Avances
+
+Practica 1 Se ha hecho fork del repositorio original y se ha modificado en linux, se ha modificado esfera y raqueta para que se muevan.
+
+Práctica 2: programa logger que recibe del juego los puntos de cada jugador mediante una tubería con nombre (FIFO). La partida termina cuando un jugador alcanza 3 puntos.

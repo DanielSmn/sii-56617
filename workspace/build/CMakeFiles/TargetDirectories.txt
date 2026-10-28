@@ -1,0 +1,4 @@
+/mnt/c/Users/danie/sii-56617/workspace/build/CMakeFiles/logger.dir
+/mnt/c/Users/danie/sii-56617/workspace/build/CMakeFiles/tenis.dir
+/mnt/c/Users/danie/sii-56617/workspace/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/danie/sii-56617/workspace/build/CMakeFiles/rebuild_cache.dir

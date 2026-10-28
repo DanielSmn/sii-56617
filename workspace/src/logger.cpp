@@ -6,28 +6,33 @@
 #include <unistd.h>
 #include <math.h>
 
+#define FIFO "/tmp/FIFO_LOGGER"
+
 int main(int argc, char **argv) {
     int fd;
     char buffer[1024];
+    int n;
 
     // borrar FIFO por si existiera previamente
-    unlink(X1);
+    unlink(FIFO);
 
     /* crear el FIFO */
-    if (mkfifo(X2)<0) {
+    if (mkfifo(FIFO, 0666)<0) {
         perror("No puede crearse el FIFO");
         return(1);
     }
     /* Abrir el FIFO */
-    if (X3) {
+    if ((fd = open(FIFO, O_RDONLY)) < 0) {
         perror("No puede abrirse el FIFO");
         return(1);
     }
     /* Leer de la FIFO */
-    while (X4) {
-	// X5: Imprimir el texto en la pantalla
+    while ((n = read(fd, buffer, sizeof(buffer)-1)) > 0) {
+	 buffer[n] = '\0';
+         printf("%s", buffer);
+         fflush(stdout);
     }
-    close(X5);
-    unlink(X6);
+    close(fd);
+    unlink(FIFO);
     return(0);
 }
