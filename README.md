@@ -50,3 +50,5 @@ Si detectas algún error o tienes alguna sugerencia de mejora, puedes comunicarl
 Practica 1 Se ha hecho fork del repositorio original y se ha modificado en linux, se ha modificado esfera y raqueta para que se muevan.
 
 Práctica 2: programa logger que recibe del juego los puntos de cada jugador mediante una tubería con nombre (FIFO). La partida termina cuando un jugador alcanza 3 puntos.
+
+Práctica 3: programa bot que mueve la raqueta del jugador 1. La partida termina cuando un jugador alcanza 3 puntos, que acaba siendo el jugador 1.

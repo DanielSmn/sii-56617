@@ -11,6 +11,7 @@
 #include <math.h>
 #include <fcntl.h> 
 #include <unistd.h>
+#include <sys/mman.h>
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -24,6 +25,8 @@ CMundo::CMundo()
 CMundo::~CMundo()
 {
 	close(fd_logger);
+	munmap(pdatos, sizeof(DatosMemCompartida));    
+	unlink("/tmp/datosBot");
 }
 
 void CMundo::InitGL()
@@ -154,9 +157,21 @@ void CMundo::OnTimer(int value)
 		write(fd_logger, msg, strlen(msg));
 	}
 	
-	if (puntos1 == 3 || puntos2 == 3)    
-	exit(0);
-
+	pdatos->esfera = esfera; 
+	pdatos->raqueta1 = jugador1;
+	pdatos->puntos1 = puntos1;
+	pdatos->puntos2 = puntos2; 
+	if (pdatos->accion == 1)    
+		OnKeyboardDown('w', 0, 0); 
+	else if (pdatos->accion == -1)    
+		OnKeyboardDown('s', 0, 0); 
+	else    
+		jugador1.velocidad.y = 0;
+	
+	if (puntos1 == 3 || puntos2 == 3){    
+		pdatos->fin = 1;
+		exit(0);
+	}
 }
 
 void CMundo::OnKeyboardDown(unsigned char key, int x, int y)
@@ -207,4 +222,19 @@ void CMundo::Init()
 	fd_logger = open("/tmp/FIFO_LOGGER", O_WRONLY); 
 	if (fd_logger < 0)    
 		perror("No puede abrirse el FIFO");
+	int fd_mem = open("/tmp/datosBot", O_RDWR | O_CREAT | O_TRUNC, 0666);
+	if (fd_mem < 0)    
+		perror("Error al crear el fichero"); 
+	ftruncate(fd_mem, sizeof(DatosMemCompartida));
+	void* dir = mmap(NULL, sizeof(DatosMemCompartida), PROT_READ | PROT_WRITE, MAP_SHARED, fd_mem, 0); 
+	if (dir == MAP_FAILED)    
+		perror("Error en la proyeccion mmap"); 
+	close(fd_mem); 
+	pdatos = (DatosMemCompartida*)dir; 
+	pdatos->accion = 0;
+	pdatos->puntos1 = 0;
+	pdatos->puntos2 = 0;
+	pdatos->fin = 0;
+		
+	
 }
