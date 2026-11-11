@@ -219,6 +219,7 @@ CMakeFiles/tenis.dir/src/Esfera.cpp.o: /mnt/c/Users/danie/sii-56617/workspace/sr
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
 
 CMakeFiles/tenis.dir/src/Mundo.cpp.o: /mnt/c/Users/danie/sii-56617/workspace/src/Mundo.cpp \
+  /mnt/c/Users/danie/sii-56617/workspace/include/DatosMemCompartida.h \
   /mnt/c/Users/danie/sii-56617/workspace/include/Esfera.h \
   /mnt/c/Users/danie/sii-56617/workspace/include/Mundo.h \
   /mnt/c/Users/danie/sii-56617/workspace/include/Plano.h \
@@ -411,6 +412,11 @@ CMakeFiles/tenis.dir/src/Mundo.cpp.o: /mnt/c/Users/danie/sii-56617/workspace/src
   /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
+  /usr/include/x86_64-linux-gnu/bits/mman.h \
+  /usr/include/x86_64-linux-gnu/bits/mman_ext.h \
   /usr/include/x86_64-linux-gnu/bits/openat2.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
@@ -483,6 +489,7 @@ CMakeFiles/tenis.dir/src/Mundo.cpp.o: /mnt/c/Users/danie/sii-56617/workspace/src
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/mman.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
@@ -1180,6 +1187,7 @@ CMakeFiles/tenis.dir/src/Vector2D.cpp.o: /mnt/c/Users/danie/sii-56617/workspace/
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
 
 CMakeFiles/tenis.dir/src/tenis.cpp.o: /mnt/c/Users/danie/sii-56617/workspace/src/tenis.cpp \
+  /mnt/c/Users/danie/sii-56617/workspace/include/DatosMemCompartida.h \
   /mnt/c/Users/danie/sii-56617/workspace/include/Esfera.h \
   /mnt/c/Users/danie/sii-56617/workspace/include/Mundo.h \
   /mnt/c/Users/danie/sii-56617/workspace/include/Plano.h \
@@ -1441,8 +1449,6 @@ tenis: /lib64/ld-linux-x86-64.so.2 \
   CMakeFiles/tenis.dir/src/tenis.cpp.o
 
 
-CMakeFiles/tenis.dir/src/tenis.cpp.o:
-
 CMakeFiles/tenis.dir/src/Vector2D.cpp.o:
 
 CMakeFiles/tenis.dir/src/Raqueta.cpp.o:
@@ -1497,6 +1503,8 @@ CMakeFiles/tenis.dir/src/Plano.cpp.o:
 
 /mnt/c/Users/danie/sii-56617/workspace/src/Plano.cpp:
 
+/usr/include/x86_64-linux-gnu/sys/mman.h:
+
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
@@ -1505,6 +1513,14 @@ CMakeFiles/tenis.dir/src/Plano.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
+/usr/include/x86_64-linux-gnu/bits/mman_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/mman-shared.h:
+
+CMakeFiles/tenis.dir/src/tenis.cpp.o:
+
+/usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
+
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h:
@@ -1512,6 +1528,8 @@ CMakeFiles/tenis.dir/src/Plano.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/stdlib.h:
 
@@ -1638,6 +1656,8 @@ CMakeFiles/tenis.dir/src/Plano.cpp.o:
 /usr/include/c++/15/bits/locale_facets.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
+
+/usr/include/x86_64-linux-gnu/bits/mman.h:
 
 /usr/include/c++/15/bits/range_access.h:
 
@@ -1921,8 +1941,6 @@ CMakeFiles/tenis.dir/src/Mundo.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -2011,7 +2029,11 @@ CMakeFiles/tenis.dir/src/Mundo.cpp.o:
 
 /mnt/c/Users/danie/sii-56617/workspace/src/Mundo.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/mnt/c/Users/danie/sii-56617/workspace/include/DatosMemCompartida.h:
+
+/usr/include/x86_64-linux-gnu/bits/mman-linux.h:
 
 /usr/include/c++/15/ios:
 
