@@ -43,6 +43,7 @@ Este repositorio tiene finalidad exclusivamente docente.
 
 Si detectas algún error o tienes alguna sugerencia de mejora, puedes comunicarlo al profesorado de la asignatura.
 
+<<<<<<< HEAD
 ---
 
 ## 📚 Avances
@@ -54,3 +55,10 @@ Práctica 2: programa logger que recibe del juego los puntos de cada jugador med
 Práctica 3: programa bot que mueve la raqueta del jugador 1. La partida termina cuando un jugador alcanza 3 puntos, que acaba siendo el jugador 1.
 
 Práctica 3: dividimos el juego en servidor y cliente y comunicamos las teclas mediante un hilo.
+=======
+
+## 🎓 Contribuciones
+
+Practica 1
+Se ha hecho fork del repositorio original y se ha modificado en linux, se ha modificado esfera y raqueta para que se muevan.
+>>>>>>> 961bee9e3f0b4c4a177828e5555b6cadcb6a8ee2
