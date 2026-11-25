@@ -52,3 +52,5 @@ Practica 1 Se ha hecho fork del repositorio original y se ha modificado en linux
 Práctica 2: programa logger que recibe del juego los puntos de cada jugador mediante una tubería con nombre (FIFO). La partida termina cuando un jugador alcanza 3 puntos.
 
 Práctica 3: programa bot que mueve la raqueta del jugador 1. La partida termina cuando un jugador alcanza 3 puntos, que acaba siendo el jugador 1.
+
+Práctica 3: dividimos el juego en servidor y cliente y comunicamos las teclas mediante un hilo.

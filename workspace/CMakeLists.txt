@@ -4,7 +4,6 @@ PROJECT (TENIS)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 
 SET(COMMON_SRCS
-    src/Mundo.cpp
     src/Esfera.cpp
     src/Plano.cpp
     src/Raqueta.cpp
@@ -13,6 +12,8 @@ SET(COMMON_SRCS
 
 ADD_EXECUTABLE(bot src/bot.cpp)
 ADD_EXECUTABLE(logger src/logger.cpp)
-ADD_EXECUTABLE(tenis src/tenis.cpp ${COMMON_SRCS})
+ADD_EXECUTABLE(cliente src/cliente.cpp src/MundoCliente.cpp ${COMMON_SRCS})
+ADD_EXECUTABLE(servidor src/servidor.cpp src/MundoServidor.cpp ${COMMON_SRCS})
 
-TARGET_LINK_LIBRARIES(tenis glut GL GLU)
+TARGET_LINK_LIBRARIES(servidor glut GL GLU pthread) 
+TARGET_LINK_LIBRARIES(cliente glut GL GLU)
